@@ -119,7 +119,7 @@ function clock() {
 
 function saveHighScore() {
     //value from initials input box
-    var intials = ; 
+    var intials = ""; 
     //if statement to check if the box is empty
     intials != "";
     //get saved scores from localStorage, if not high scores available set to empty array
