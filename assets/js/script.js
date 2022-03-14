@@ -1,8 +1,5 @@
 //timer
-
-//display title, explanation, start quiz button
-    //global var
-        //quereyselectors
+//Quiz questions        
 var questions = [
     {
         title: "Commonly used data types DO NOT include:",
@@ -30,27 +27,36 @@ var questions = [
         answer: "quotes",
     }
 ]; 
-    //tracking where state of quiz
-    var currentQuestionIndex = 0;
-    var time = questions.length * 15;
-    console.log(time)
-    var timerId;
-    //Increment to next question within questions: currentQuestionIndex++;
-    console.log(questions[currentQuestionIndex].title)
-    //querySelectors
-    //ids to select
-        //question
-        //choices
-        //hidden or visible
-        //submit button to start quiz
-        //submit button for choices
-        //submit button on high scores
-        //feedback for correct and incorrect answers
+//tracking where state of quiz
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+console.log(time)
+var timerId;
+//Increment to next question within questions: currentQuestionIndex++;
+console.log(questions[currentQuestionIndex].title)
 
 
+//display title, explanation, start quiz button
+    //global var
+        //quereyselectors
+        var nameEl = document.querySelector("#");
+        var nameEl = document.querySelector("#");
+        var nameEl = document.querySelector("#");
+        var nameEl = document.querySelector("#");
+        var nameEl = document.querySelector("#");
+//querySelectors
+//ids to select
+    //question
+    //choices
+    //hidden or visible
+    //submit button to start quiz
+    //submit button for choices
+    //submit button on high scores
+    //feedback for correct and incorrect answers
 
 //   ];      
 //"click" start quiz (listener)
+
 function startQuiz() {
 //hide start screen
     //querySelector grabs start screen 
@@ -58,13 +64,13 @@ function startQuiz() {
 //remove attribute hiding questions using html class 
 //start timer
     //timer setInterval
-        var timerId = setInterval(clock, 1000)
+var timerId = setInterval(clock, 1000)
 //show timer
     //using text.content to display
-    timerEl.textContent = time
+timerEl.textContent = time
 //call function getQuestions()
 getQuestion();
-}
+};
 
 function getQuestion() {
     //populate first question from array
@@ -73,7 +79,18 @@ function getQuestion() {
         //querySelector to grab question titleEl 
         //show question and choices with text.content
     //clear any old questions choices
+    var answer = "";
+    answer = [];
     //loop over choices
+    for (var i = 0; i < questions.length; i++) {
+        var answer = "";
+        answer = [];
+        for (questions[i].answer) {
+            answer.push()
+        }
+    }
+
+
         //for loop currentQUestion.choices
         //create button for each choice
             //set attribute class for each choice
@@ -129,27 +146,12 @@ function saveHighScore() {
     //save to localStorage push HighScores array.push method
         //set item on localStorage
         //JSON
+        var saveScore = function() {
+            localStorage.setItem("intials", JSON.stringify(highScore));
+          };
     // go back button
         //window 
 }
 
 //click event listener to start quiz
 //event listener to save highScore
-
-
-//present one question per page (like slides)
-//page refreshes with new question but bowser isn't completely refreshed
-//
-
-//click listener for each quiz question answer
-//correct answer clicked move to next questions
-//wrong answer clicked subtract 10 seconds and move to next question
-
-
-//results display if all questions are complete ot timer reaches is = 0
-//timer reaches zero = game over, present results page
-
-//how to keep a running score?
-
-
-//store high scores in local storage

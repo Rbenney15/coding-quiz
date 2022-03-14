@@ -14,15 +14,42 @@
         <a href="./highscore.html">View High Scores</a>
         <!-- adding class and id tags to timer-->
         <div>
-            Timer
+            <h3>Timer</h3>
+            <span></span>
         </div>
     </header>
-    <section>
+    <div id="container">
+        <div id="question-container" class="hide">
+            <div id="questions">Coding Quiz Challenge</div>
+                <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <div class="controls">
+                <button id="start-btn" class="start-btn btn">Start Quiz</button>
+            </div>            
+            </div>
+            <div class="hide">Questions
+                <div id="answer-buttons" class="btn-grid hide">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- original HTML below
+    <div id="container"></div>
+    <button id="submit">Submit</button>
+    <div id="container">
         <h1 class="title">Coding Quiz Challenge</h1>
             <p id="body-text">Try to answer the following code related questions within the time llimit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
             <button class="btn">Start Quiz</button>
-    </section>
-    <!-- timer div
+    </div> -->
+
+
+    <!-- Notes: 
+        timer div
      question div h2 or h3
     choices
     div final score <Span> to call result
@@ -34,14 +61,14 @@
         css class called hide and visible applying to questions and results
     div that announces feedback: correct or inccorect -->
     
-        <section>
+        <section class="hide">
             <h1>All done!</h1>
             <p>Your final score is (insert score)</p>
-            <form>
+            <div id="score">
                 <p>Enter Initials:</p>
                 <input type="text" name="enterInitials" />
-            </form>
-            <button>Submit</button>
+            </div>
+            <button id="submit-results" class="btn">Submit</button>
         </section>
 
     <script src="./assets/js/script.js"></script>
