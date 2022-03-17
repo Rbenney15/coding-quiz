@@ -14,39 +14,25 @@
         <a href="./highscore.html">View High Scores</a>
         <!-- adding class and id tags to timer-->
         <div>
-            <h3>Timer</h3>
+            <h3 id="timer">Timer</h3>
             <span></span>
         </div>
     </header>
     <div id="container">
-        <div id="question-container" class="hide">
-            <div id="questions">Coding Quiz Challenge</div>
+        <div id="start-screen">
+            <div id="start-screen">Coding Quiz Challenge</div>
                 <p>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
             <div class="controls">
                 <button id="start-btn" class="start-btn btn">Start Quiz</button>
             </div>            
             </div>
-            <div class="hide">Questions
-                <div id="answer-buttons" class="btn-grid hide">
-                    <button class="btn">Answer 1</button>
-                    <button class="btn">Answer 2</button>
-                    <button class="btn">Answer 3</button>
-                    <button class="btn">Answer 4</button>
+            <div id="questions" class="hide">Questions
+                <h2 id="title"></h2>
+                <div id="choice"></div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <!-- original HTML below
-    <div id="container"></div>
-    <button id="submit">Submit</button>
-    <div id="container">
-        <h1 class="title">Coding Quiz Challenge</h1>
-            <p id="body-text">Try to answer the following code related questions within the time llimit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <button class="btn">Start Quiz</button>
-    </div> -->
-
 
     <!-- Notes: 
         timer div

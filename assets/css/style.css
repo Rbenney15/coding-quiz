@@ -30,7 +30,7 @@ body.wrong {
 }
 
 .btn-grid { 
-    layout of buttons;
+   /* layout of buttons */
 }
 
 .btn {
@@ -42,4 +42,25 @@ body.wrong {
 .btn:hover {
     background-color: white;
     color: black;
+}
+
+.btn.correct {
+    background-color: green;
+}
+
+.btn.wrong {
+    background-color: red;
+
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* This will hide each question until called */
+  .hide {
+    display: none;
 }
