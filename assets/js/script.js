@@ -45,31 +45,34 @@ function nextQuestion() {
     //populate first question from array
     var currentQuestion = questions[currentQuestionIndex];
     titleEl.textContent = currentQuestion.title;
+    choicesEl.textContent = currentQuestion.choices
     console.log(currentQuestion)
     console.log(currentQuestion.choices)
     //update title to question name
         //querySelector to grab question titleEl 
         //show question and choices with text.content
     //clear any old questions choices
-    resetState()
+    // resetState()
     //loop over choices
     for (var i = 0; i < questions.length; i++) {
         var choiceBtn = document.createElement("button")
-        button.innerText = choice.text
-        button.classList.add('btn')
+        choiceBtn.innerText = choice.text
+        choiceBtn.classList.add('btn')
         if (choice.correct){
             button.dataset.correct = choice.correct
+            console.log(currentQuestion.choices[i])
         }
-        button.addEventListener('click', userClick)
-        choicesEl.appendChild(choicesEl)
-        choicesEl.appendChild(choicesEl)
-        choicesEl.appendChild(choicesEl)
-        choicesEl.appendChild(choicesEl)
-
-
+        
+        choiceBtn.addEventListener('click', userClick)
+        choicesEl.appendChild(choiceBtn)
         choiceBtn.setAttribute("class", "choice")
         choiceBtn.setAttribute("value", choice)
-        choicesEl.setAttribute ()
+        choiceBtn.appendChild(choicesEl)
+        console.log(choiceBtn)
+        // choicesEl.appendChild(choicesEl)
+        // choicesEl.appendChild(choicesEl)
+        // choicesEl.appendChild(choicesEl)
+        // choicesEl.appendChild(choicesEl)
         
     }
 
@@ -100,10 +103,13 @@ function userClick(event) {
         //subtract 15 seconds
     //display updated new time 
     currentQuestionIndex = questions.length
-    currentQuestion++;
+    currentQuestion--;
     //check if we run out of questions
     if (currentQuestionIndex === question.length) {
         endQuiz();
+    } else {
+        // currentQuestionIndex ===
+        // nextQuestion()
     }
 
             //no more questions run end quiz function
