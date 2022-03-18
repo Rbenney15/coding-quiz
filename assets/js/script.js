@@ -36,7 +36,7 @@ clock();
 var timerId = setInterval(clock, 1000)
 //show timer
     //using text.content to display
-timerEl.textContent = timeId
+timerEl.textContent = timerId
 //call function getQuestions()
 nextQuestion();
 };
@@ -44,7 +44,9 @@ nextQuestion();
 function nextQuestion() {
     //populate first question from array
     var currentQuestion = questions[currentQuestionIndex];
-    titleEl.textContent = currentQuestionIndex.title;
+    titleEl.textContent = currentQuestion.title;
+    console.log(currentQuestion)
+    console.log(currentQuestion.choices)
     //update title to question name
         //querySelector to grab question titleEl 
         //show question and choices with text.content
@@ -67,7 +69,8 @@ function nextQuestion() {
 
         choiceBtn.setAttribute("class", "choice")
         choiceBtn.setAttribute("value", choice)
-        choicesEl.setAttribute
+        choicesEl.setAttribute ()
+        
     }
 
         //for loop currentQUestion.choices
