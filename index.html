@@ -1,62 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="highscores" href="./highscore.html">
-    <title>Coding Quiz Challenge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="highscores" href="./highscore.html">
+  <title>Quiz App</title>
 </head>
-<body>
-    <header>
-        <!--link the highscores page as hyperlink-->
-        <a class="high-scores" href="./highscore.html">View High Scores</a>
-        <!-- adding class and id tags to timer-->
-        <div>
-            <h3 id="timer">Timer</h3>
-            <span></span>
-        </div>
-    </header>
-    <div id="container">
-        <div id="start-screen">
-            <div id="start-screen" class="start-screen">Coding Quiz Challenge</div>
-                <p class="start-screen">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <div class="">
-                <button id="start-btn" class="start-btn btn">Start Quiz</button>
-            </div>            
-            </div>
-            <div id="questions" class="hide">
-                <h2 id="title" class="start-screen"></h2>
-                <div id="choice" class="choice"></div>
-                </div>
-            </div>
-        </div>
+<header>
+    <!--link the highscores page as hyperlink-->
+    <a class="high-scores" href="./highscore.html">View High Scores</a>
+    <!-- adding class and id tags to timer-->
+    <div>
+        <h3 id="timer" class="timer-display">Timer:</h3>
+        <span></span>
     </div>
-
-    <!-- Notes: 
-        timer div
-     question div h2 or h3
-    choices
-    div final score <Span> to call result
-        <p> to enter intials
-            <input inside <p>
-                <btn> for submit score
-       div controls questions open div that used as selector
-        id's and classes
-        css class called hide and visible applying to questions and results
-    div that announces feedback: correct or inccorect -->
-    
-        <section class="hide">
+</header>
+<body>
+    <div class="container">
+        <div id="start-screen" class="start-screen" >Coding Quiz Challenge</div>
+            <p id="start-screen-text">Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+        <div>
+            <button id="start-btn" class="start-btn btn">Start Quiz</button>
+        </div>
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <div id="end-screen" class="hide">
             <h1>All done!</h1>
-            <p>Your final score is (insert score)</p>
+            <p>Your final score is .</p>
             <div id="score">
                 <p>Enter Initials:</p>
                 <input type="text" name="enterInitials" />
+                <button id="submit-score" class="btn">Submit Score</button>
             </div>
-            <button id="submit-results" class="btn">Submit</button>
-        </section>
-
-    <script src="./assets/js/script.js"></script>
+        </div>
+    </div>
+    <div class="controls">
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+      <button id="submit-score" class="btn hide">Submit</button>
+    </div>
+  </div>
+  <script defer src="./assets/js/script.js"></script>
 </body>
 </html>
