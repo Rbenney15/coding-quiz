@@ -7,6 +7,10 @@ var startScreenElement = document.getElementById("start-screen");
 var startScreenTextElement = document.getElementById("start-screen-text");
 var endScreenElement = document.getElementById("end-screen");
 var timerEl = document.getElementById("timer");
+var scoreElement = document.getElementById('score')
+var submitScoreBtn = document.getElementById('submit-score')
+var initialsEl = document.getElementById('initials')
+var ResultEl = document.getElementById('result')
 
 var shuffledQuestions, currentQuestionIndex, timeInterval;
 
@@ -64,7 +68,7 @@ function selectAnswer(event) {
     setStatusClass(button, button.dataset.correct);
   });
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove("hide");
+    nextButton.classList.remove('hide');
   } else {
     endQuiz();
   }
@@ -76,7 +80,6 @@ function setStatusClass(element, correct) {
     element.classList.add("correct");
   } else {
     element.classList.add("wrong")
-    timeLeft -10;
   }
 }
 
@@ -109,27 +112,32 @@ function endQuiz() {
   questionElement.classList.add('hide')
   answerButtonsElement.classList.add('hide')
   endScreenElement.classList.remove('hide')
-
+  scoreElement.textContent = 'Your final score is  ' + timeLeft + '.' ;
+  
+  submitScoreBtn.addEventListener('click', saveHighScore);
 }
 
 function saveHighScore() {
     //value from initials input box
-    var intials = "";
-    var highScore = timeLeft; 
-    //if statement to check if the box is empty
-    intials != "";
-    //get saved scores from localStorage, if not high scores available set to empty array
-    
-    //var higScore || "initials", JSON.parse(highScore)
-    
-    //format new score for new user
-        //object
-    //save to localStorage push HighScores array.push method
-    var saveScore = function() {
-        localStorage.setItem("intials", JSON.stringify(highScore));
-    };
-    // go back button
-        //window 
+    var initials = initialsEl.value;
+    var highScore = {
+        initials, 
+        score: timeLeft 
+    }
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || []
+    highScores.push(highScore)
+
+    localStorage.setItem("highScores", JSON.stringify(highScores))
+    showHighScores(highScores);
+}
+
+function showHighScores(highScores) {
+    ResultEl.classList.remove('hide')
+    endScreenElement.classList.add('hide')
+
+//sort method array by score
+//loop highScores, get initials and score, put initials on screen
+//create elements and appendChild them
 }
 
 

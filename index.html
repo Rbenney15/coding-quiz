@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="./assets/css/style.css" rel="stylesheet">
-  <link rel="highscores" href="./highscore.html">
   <title>Quiz App</title>
 </head>
 <header>
@@ -34,11 +33,19 @@
         </div>
         <div id="end-screen" class="hide">
             <h1>All done!</h1>
-            <p>Your final score is .</p>
-            <div id="score">
+            <p id="score">Your final score is .</p>
+            <div>
                 <p>Enter Initials:</p>
-                <input type="text" name="enterInitials" />
+                <input id="initials" type="text" name="enterInitials" />
                 <button id="submit-score" class="btn">Submit Score</button>
+            </div>
+        </div>
+        <div id="result" class="hide">
+            <h1 class="start-screen" id="timer">High Scores</h1>
+            <!-- display pulled results from results page here-->
+            <div class="contorls">
+            <button class="btn">Restart</button> <!-- Restart quiz-->
+            <button class="btn clear-score">Clear High Scores</button>
             </div>
         </div>
     </div>
