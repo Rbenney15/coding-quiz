@@ -67,15 +67,11 @@ function nextQuestion() {
         choicesEl.appendChild(choiceBtn)
         choiceBtn.setAttribute("class", "choice")
         choiceBtn.setAttribute("value", choice)
-        choiceBtn.appendChild(choicesEl)
-        console.log(choiceBtn)
-        // choicesEl.appendChild(choicesEl)
-        // choicesEl.appendChild(choicesEl)
-        // choicesEl.appendChild(choicesEl)
-        // choicesEl.appendChild(choicesEl)
-        
+        console.log(choiceBtn)    
     }
-
+        //resetState aka reset answers so next question and new choices show
+        // up for each new question
+        
         //for loop currentQUestion.choices
         //create button for each choice
             //set attribute class for each choice
@@ -102,19 +98,17 @@ function userClick(event) {
     //if wrong penalize time
         //subtract 15 seconds
     //display updated new time 
-    currentQuestionIndex = questions.length
     currentQuestion--;
     //check if we run out of questions
     if (currentQuestionIndex === question.length) {
         endQuiz();
-    } else {
-        // currentQuestionIndex ===
-        // nextQuestion()
-    }
-
-            //no more questions run end quiz function
+    } else { 
+        currentQuestionIndex > question.length,
+        nextQuestion()
+    };
+        //no more questions run end quiz function
         //else more questions available run getQuestion()
-}
+};
 
 function endQuiz() {
     //stop timer
@@ -124,7 +118,7 @@ function endQuiz() {
     //show final score finalScoreEl
         //time as text.content for final score
     //hide question
-}
+};
 
 function clock() {
     //update time
