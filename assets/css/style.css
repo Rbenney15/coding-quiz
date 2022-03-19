@@ -7,14 +7,25 @@ h3 {
     justify-content: flex-end;
 }
 
+.high-scores {
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    border-radius: 5px;
+}
+
 .start-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     flex-wrap: wrap;
+    font-size: 35px;
 }
-
+.start-screen p {
+  font-size: 28px;
+  font-weight: lighter;  
+}
 .container {
     display: flex;
     width: 800px;
@@ -35,6 +46,8 @@ h3 {
     background-color: purple;
     color: white;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .btn:hover {
