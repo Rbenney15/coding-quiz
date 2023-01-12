@@ -4,7 +4,7 @@ Coding Quiz
 
 
 ## Descripton
-* This is a coding quiz.
+* This is a coding quiz to test basic coding knowledge.
 
 ## Instructions
 Click "Start Quiz"
